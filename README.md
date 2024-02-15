@@ -5,9 +5,13 @@ A Plugin for adding documentation to your classes in-editor - as simple as it ge
 Useful for collaborative projects, but also for explaining AddOns to other users.
 
 ## Usage on it's own
- 1. get it off the Godot Asset Lib
+ 1. get the Plugin off the Godot Asset Lib
  1. enable it in your Project Settings
  2. add `const DOCS = "explain me"` to any class
+
+## Usage in another Editor Plugin:
+ 1. Include inspector_doc_plugin.gd in your AddOn.
+ 2. Load/unload it in `_enter_tree()` and `_exit_tree()`
  
 ## Tips and Tricks
 
@@ -23,3 +27,6 @@ Useful for collaborative projects, but also for explaining AddOns to other users
 	## read me when hovering above a variable.
 	@export var my_var
    ```
+
+## Limitations
+You need to refresh a scene to cause docs to update or show up.
